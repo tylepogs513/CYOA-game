@@ -48,6 +48,7 @@
             // blueLabel
             // 
             this.blueLabel.AutoSize = true;
+            this.blueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blueLabel.Location = new System.Drawing.Point(46, 312);
             this.blueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.blueLabel.MinimumSize = new System.Drawing.Size(257, 23);
@@ -59,6 +60,7 @@
             // redLabel
             // 
             this.redLabel.AutoSize = true;
+            this.redLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.redLabel.Location = new System.Drawing.Point(46, 348);
             this.redLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.redLabel.MinimumSize = new System.Drawing.Size(257, 23);
