@@ -69,18 +69,26 @@ namespace CYOA_game
                 else if (scene == 3)
                 {
                     scene = 7;
+                    Thread.Sleep(100);
+                    scene = 15;
                 }
                 else if (scene == 4)
                 {
                     scene = 9;
+                    Thread.Sleep(100);
+                    scene = 15;
                 }
                 else if (scene == 5)
                 {
                     scene = 11;
+                    Thread.Sleep(100);
+                    scene = 16;
                 }
                 else if (scene == 6)
                 {
                     scene = 13;
+                    Thread.Sleep(100);
+                    scene = 16;
                 }
                 else if (scene == 7)
                 {
@@ -101,6 +109,8 @@ namespace CYOA_game
                 else if (scene == 15)
                 {
                     scene = 17;
+                    Thread.Sleep(100);
+                    scene = 24;
                 }
                 else if (scene == 16)
                 {
@@ -109,18 +119,22 @@ namespace CYOA_game
                 else if (scene == 17)
                 {
                     scene = 19;
+                    Thread.Sleep(100);
+                    scene = 24;
                 }
                 else if (scene == 18)
                 {
                     scene = 21;
+                    Thread.Sleep(100);
+                    scene = 24;
                 }
                 else if (scene == 19)
                 {
-                    scene = 23;
+                    scene = 24;
                 }
                 else if (scene == 21)
                 {
-                    scene = 23;
+                    scene = 24;
                 }
                 else if (scene == 24)
                 {
@@ -153,34 +167,46 @@ namespace CYOA_game
                 else if (scene == 3)
                 {
                     scene = 8;
+                    Thread.Sleep(100);
+                    scene = 15;
                 }
                 else if (scene == 4)
                 {
                     scene = 10;
+                    Thread.Sleep(100);
+                    scene = 15;
                 }
                 else if (scene == 5)
                 {
                     scene = 12;
+                    Thread.Sleep(100);
+                    scene = 16;
                 }
                 else if (scene == 6)
                 {
                     scene = 14;
+                    Thread.Sleep(100);
+                    scene = 16;
                 }
                 else if (scene == 15)
                 {
-                    scene = 23;
+                    scene = 24;
                 }
                 else if (scene == 16)
                 {
-                    scene = 23;
+                    scene = 24;
                 }
                 else if (scene == 17)
                 {
                     scene = 20;
+                    Thread.Sleep(100);
+                    scene = 24;
                 }
                 else if (scene == 18)
                 {
                     scene = 22;
+                    Thread.Sleep(100);
+                    scene = 24;
                 }
                 else if (scene == 24)
                 {
@@ -192,141 +218,194 @@ namespace CYOA_game
                 }
                 else if (scene == 26)
                 {
-
+                    Close();
                 }
             }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
 
-            switch (scene)
+                switch (scene)
             {
                 case 0:
                     outputLabel.Text = "Which Pizza Company";
                     redLabel.Text = "Pasaport";
                     blueLabel.Text = "Paisano's";
+                    sceneTest.Text = "0";
                     break;
                 case 1:
                     outputLabel.Text = "What kind of pizza?";
                     redLabel.Text = "Hawaiian";
                     blueLabel.Text = "Canadian";
+                    sideImageR.Visible = false;
                     locationImage.Image = Properties.Resources.Paisanos_pizza;
+                    sceneTest.Text = "1";
                     break;
                 case 2:
                     outputLabel.Text = "What kind of pizza?";
                     redLabel.Text = "Cheese";
                     blueLabel.Text = "Pepperoni";
+                    sideImageR.Visible = false;
                     locationImage.Image = Properties.Resources.Pasaport_pizza;
+                    sceneTest.Text = "2";
                     break;
                 case 3:
                     outputLabel.Text = "What size?";
                     redLabel.Text = "Small";
                     blueLabel.Text = "Large";
+                    sceneTest.Text = "3";
                     break;
                 case 4:
                     outputLabel.Text = "What size?";
                     redLabel.Text = "Small";
                     blueLabel.Text = "Large";
+                    sceneTest.Text = "4";
                     break;
                 case 5:
                     outputLabel.Text = "What size?";
                     redLabel.Text = "Small";
                     blueLabel.Text = "Large";
+                    sceneTest.Text = "5";
                     break;
                 case 6:
                     outputLabel.Text = "What size?";
                     redLabel.Text = "Small";
                     blueLabel.Text = "Large";
+                    sceneTest.Text = "6";
                     break;
                 case 7:
+                    outputLabel.Text = "What size? \nClick again. ";
                     subTotal = subTotal + canadianLPrice;
-                    scene = 15;
+                    sceneTest.Text = "7";
                     break;
                 case 8:
+                    outputLabel.Text = "What size? \nClick again. ";
                     subTotal = subTotal + canadianSPrice;
-                    scene = 15;
+                    sceneTest.Text = "8";
                     break;
                 case 9:
+                    outputLabel.Text = "What size? \nClick again. ";
                     subTotal = subTotal + hawaiianLPrice;
-                    scene = 15;
+                    sceneTest.Text = "9";
                     break;
                 case 10:
+                    outputLabel.Text = "What size? \nClick again. ";
                     subTotal = subTotal + hawaiianSPrice;
-                    scene = 15;
+                    sceneTest.Text = "10";
                     break;
                 case 11:
+                    outputLabel.Text = "What size? \nClick again. ";
                     subTotal = subTotal + pepperoniLPrice;
-                    scene = 16;
+                    sceneTest.Text = "11";
                     break;
                 case 12:
+                    outputLabel.Text = "What size? \nClick again. ";
                     subTotal = subTotal + pepperoniSPrice;
-                    scene = 16;
+                    sceneTest.Text = "12";
                     break;
                 case 13:
+                    outputLabel.Text = "What size? \nClick again. ";
                     subTotal = subTotal + cheeseLPrice;
-                    scene = 16;
+                    sceneTest.Text = "13";
                     break;
                 case 14:
+                    outputLabel.Text = "What size? \nClick again. ";
                     subTotal = subTotal + cheeseSPrice;
-                    scene = 16;
+                    sceneTest.Text = "14";
                     break;
                 case 15:
                     outputLabel.Text = "Any sides or extras?";
+                    locationImage.Image = null;
+                    sideImageR.Visible = true;
                     redLabel.Text = "Nothing";
+                    sideImageR.Image = Properties.Resources.nothing;
                     blueLabel.Text = "Chicken Wings";
+                    sideImageL.Image = Properties.Resources.chickenwings;
+                    sceneTest.Text = "15";
                     break;
                 case 16:
                     outputLabel.Text = "Any sides or extras?";
+                    locationImage.Image = null;
+                    sideImageR.Visible = true;
                     redLabel.Text = "Nothing";
+                    sideImageR.Image = Properties.Resources.nothing;
                     blueLabel.Text = "Fries";
+                    sideImageL.Image = Properties.Resources.fries;
+                    sceneTest.Text = "16";
                     break;
                 case 17:
+                    sideImageR.Visible = true;
+                    sideImageR.Image = null;
+                    sideImageL.Image = null;
                     outputLabel.Text = "Boneless?";
                     redLabel.Text = "No";
                     blueLabel.Text = "Yes";
+                    sceneTest.Text = "17";
                     break;
                 case 18:
+                    sideImageR.Visible = true;
+                    sideImageR.Image = null;
+                    sideImageL.Image = null;
                     outputLabel.Text = "What size?";
                     redLabel.Text = "Small";
                     blueLabel.Text = "Large";
+                    sceneTest.Text = "18";
                     break;
                 case 19:
+                    outputLabel.Text = "Boneless? \nClick again";
                     subTotal = subTotal + bonelessWingPrice;
-                    scene = 23;
+                    sceneTest.Text = "19";
                     break;
                 case 20:
+                    outputLabel.Text = "Boneless? \nClick again.";
                     subTotal = subTotal + boneWingPrice;
-                    scene = 23;
+                    sceneTest.Text = "20";
                     break;
                 case 21:
+                    outputLabel.Text = "What size? \nClick again.";
                     subTotal = subTotal + friesLPrice;
-                    scene = 23;
+                    sceneTest.Text = "21";
                     break;
                 case 22:
+                    outputLabel.Text = "What size? \nClick again.";
                     subTotal = subTotal + friesSPrice;
-                    scene = 23;
+                    sceneTest.Text = "22";
                     break;
                 case 23:
+                    sideImageR.Image = null;
+                    sideImageL.Image = null;
                     double total = taxFull * subTotal;
                     taxTotal = tax * subTotal;
-                    outputLabel.Text = "Calculating...";
-                    Thread.Sleep(300);
-                    outputLabel.Text = "Subtotal: " + subTotal + "\nTax: " + taxTotal + "\nTotal: " + total;
-                    Thread.Sleep(1000);
-                    scene = 24;
+                    string tax1 = taxTotal.ToString("C");
+                    string total1 = total.ToString("C");
+                    string subTotal1 = subTotal.ToString("C");
+                    outputLabel.Text = "Subtotal: " + subTotal1 + "\nTax:      " + tax1 + "\nTotal:    " + total1;
+                    redLabel.Text = "";
+                    blueLabel.Text = "";
+                    sceneTest.Text = "23";
                     break;
                 case 24:
+                    sideImageR.Image = null;
+                    sideImageL.Image = null;
                     total = taxFull * subTotal;
-                    outputLabel.Text = "Your total is " + total + "\n\n Would you like to tip?";
+                    total1 = total.ToString("C");
+                    outputLabel.Text = "Your total is " + total1 + "\n\nWould you like to tip?";
                     redLabel.Text = "No";
                     blueLabel.Text = "Yes";
+                    sceneTest.Text = "24";
                     break;
                 case 25:
                     outputLabel.Text = "How would you like to pay?";
                     redLabel.Text = "Cash";
                     blueLabel.Text = "Credit/Debit";
+                    sceneTest.Text = "25";
                     break;
                 case 26:
                     outputLabel.Text = "Thank You! \nPlease Come Again!";
                     redLabel.Text = "Quit";
                     blueLabel.Text = "Shop Again";
+                    sceneTest.Text = "26";
                     break;
             }
         }

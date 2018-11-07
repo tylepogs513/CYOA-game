@@ -28,15 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.blueLabel = new System.Windows.Forms.Label();
             this.redLabel = new System.Windows.Forms.Label();
             this.outputLabel = new System.Windows.Forms.Label();
             this.blueImage = new System.Windows.Forms.PictureBox();
             this.redImage = new System.Windows.Forms.PictureBox();
             this.locationImage = new System.Windows.Forms.PictureBox();
+            this.sceneTest = new System.Windows.Forms.Label();
+            this.sideImageL = new System.Windows.Forms.PictureBox();
+            this.sideImageR = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.blueImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.redImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sideImageL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sideImageR)).BeginInit();
             this.SuspendLayout();
             // 
             // blueLabel
@@ -63,7 +69,7 @@
             // 
             // outputLabel
             // 
-            this.outputLabel.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputLabel.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputLabel.ForeColor = System.Drawing.Color.Black;
             this.outputLabel.Location = new System.Drawing.Point(24, 28);
             this.outputLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -102,24 +108,55 @@
             this.locationImage.TabIndex = 7;
             this.locationImage.TabStop = false;
             // 
+            // sceneTest
+            // 
+            this.sceneTest.AutoSize = true;
+            this.sceneTest.Location = new System.Drawing.Point(317, 37);
+            this.sceneTest.Name = "sceneTest";
+            this.sceneTest.Size = new System.Drawing.Size(0, 13);
+            this.sceneTest.TabIndex = 8;
+            // 
+            // sideImageL
+            // 
+            this.sideImageL.Location = new System.Drawing.Point(12, 171);
+            this.sideImageL.Name = "sideImageL";
+            this.sideImageL.Size = new System.Drawing.Size(125, 125);
+            this.sideImageL.TabIndex = 9;
+            this.sideImageL.TabStop = false;
+            // 
+            // sideImageR
+            // 
+            this.sideImageR.Location = new System.Drawing.Point(249, 171);
+            this.sideImageR.Name = "sideImageR";
+            this.sideImageR.Size = new System.Drawing.Size(125, 125);
+            this.sideImageR.TabIndex = 10;
+            this.sideImageR.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(386, 422);
+            this.Controls.Add(this.sideImageR);
+            this.Controls.Add(this.sideImageL);
+            this.Controls.Add(this.sceneTest);
             this.Controls.Add(this.locationImage);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.blueImage);
             this.Controls.Add(this.redImage);
             this.Controls.Add(this.redLabel);
             this.Controls.Add(this.blueLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pizza Buyer 3000";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.blueImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sideImageL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sideImageR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,6 +170,9 @@
         private System.Windows.Forms.PictureBox redImage;
         private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.PictureBox locationImage;
+        private System.Windows.Forms.Label sceneTest;
+        private System.Windows.Forms.PictureBox sideImageL;
+        private System.Windows.Forms.PictureBox sideImageR;
     }
 }
 

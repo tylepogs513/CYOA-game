@@ -107,5 +107,41 @@
   <ItemGroup>
     <None Include="Resources\Paisanos pizza-6.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peppizza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cheesepizza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\canadianpizza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hawaiianpizza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pepperonipizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nothing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fries.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nothing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chickenwings.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
