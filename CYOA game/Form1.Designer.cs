@@ -35,7 +35,6 @@
             this.blueImage = new System.Windows.Forms.PictureBox();
             this.redImage = new System.Windows.Forms.PictureBox();
             this.locationImage = new System.Windows.Forms.PictureBox();
-            this.sceneTest = new System.Windows.Forms.Label();
             this.sideImageL = new System.Windows.Forms.PictureBox();
             this.sideImageR = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.blueImage)).BeginInit();
@@ -73,7 +72,7 @@
             // 
             this.outputLabel.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputLabel.ForeColor = System.Drawing.Color.Black;
-            this.outputLabel.Location = new System.Drawing.Point(24, 28);
+            this.outputLabel.Location = new System.Drawing.Point(25, 25);
             this.outputLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(339, 257);
@@ -110,14 +109,6 @@
             this.locationImage.TabIndex = 7;
             this.locationImage.TabStop = false;
             // 
-            // sceneTest
-            // 
-            this.sceneTest.AutoSize = true;
-            this.sceneTest.Location = new System.Drawing.Point(317, 37);
-            this.sceneTest.Name = "sceneTest";
-            this.sceneTest.Size = new System.Drawing.Size(0, 13);
-            this.sceneTest.TabIndex = 8;
-            // 
             // sideImageL
             // 
             this.sideImageL.Location = new System.Drawing.Point(12, 171);
@@ -142,7 +133,6 @@
             this.ClientSize = new System.Drawing.Size(386, 422);
             this.Controls.Add(this.sideImageR);
             this.Controls.Add(this.sideImageL);
-            this.Controls.Add(this.sceneTest);
             this.Controls.Add(this.locationImage);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.blueImage);
@@ -172,7 +162,6 @@
         private System.Windows.Forms.PictureBox redImage;
         private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.PictureBox locationImage;
-        private System.Windows.Forms.Label sceneTest;
         private System.Windows.Forms.PictureBox sideImageL;
         private System.Windows.Forms.PictureBox sideImageR;
     }

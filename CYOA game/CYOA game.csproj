@@ -129,9 +129,6 @@
     <None Include="Resources\pepperonipizza.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pizza.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\nothing.png" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +139,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\chickenwings.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\have nice day.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tip.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

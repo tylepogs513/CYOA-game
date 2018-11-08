@@ -19,7 +19,7 @@ namespace CYOA_game
     {
         int scene = 0;
 
-        //Domino's prices
+        //Paisano's prices
         const double canadianSPrice = 11.00;
         const double canadianLPrice = 15.00;
         const double hawaiianSPrice = 10.00;
@@ -27,7 +27,7 @@ namespace CYOA_game
         const double boneWingPrice = 9.99;
         const double bonelessWingPrice = 8.99;
 
-        //Pizza Pizza prices
+        //Pasaport's prices
         const double pepperoniSPrice = 8.95;
         const double pepperoniLPrice = 12.80;
         const double cheeseSPrice = 7.50;
@@ -45,6 +45,9 @@ namespace CYOA_game
         public Form1()
         {
             InitializeComponent();
+            //opening scene
+            locationImage.Image = Properties.Resources.pizza;
+            sideImageR.Visible = false;
             outputLabel.Text = "Which Pizza Company";
             redLabel.Text = "Pasaport";
             blueLabel.Text = "Paisano's";
@@ -52,7 +55,7 @@ namespace CYOA_game
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         { 
-            if (e.KeyCode == Keys.B) //blue button
+            if (e.KeyCode == Keys.B) //when blue button is pressed, change the scene
             {
                 if (scene == 0)
                 {
@@ -136,7 +139,7 @@ namespace CYOA_game
                 }
             }
 
-            else if (e.KeyCode == Keys.M) //red button
+            else if (e.KeyCode == Keys.M) //when the red button is pressed, change the scene
             {
                 if (scene == 0)
                 {
@@ -195,7 +198,7 @@ namespace CYOA_game
                     Close();
                 }
             }
-            else if (e.KeyCode == Keys.Escape)
+            else if (e.KeyCode == Keys.Escape)//when the black button is pressed, quit the program. 
             {
                 Close();
             }
@@ -203,10 +206,10 @@ namespace CYOA_game
                 switch (scene)
             {
                 case 0:
+                    locationImage.Image = Properties.Resources.pizza;
                     outputLabel.Text = "Which Pizza Company";
                     redLabel.Text = "Pasaport";
                     blueLabel.Text = "Paisano's";
-                    sceneTest.Text = "0";
                     break;
                 case 1:
                     outputLabel.Text = "What kind of pizza?";
@@ -214,7 +217,6 @@ namespace CYOA_game
                     blueLabel.Text = "Canadian";
                     sideImageR.Visible = false;
                     locationImage.Image = Properties.Resources.Paisanos_pizza;
-                    sceneTest.Text = "1";
                     break;
                 case 2:
                     outputLabel.Text = "What kind of pizza?";
@@ -222,31 +224,26 @@ namespace CYOA_game
                     blueLabel.Text = "Pepperoni";
                     sideImageR.Visible = false;
                     locationImage.Image = Properties.Resources.Pasaport_pizza;
-                    sceneTest.Text = "2";
                     break;
                 case 3:
                     outputLabel.Text = "What size?";
                     redLabel.Text = "Small";
                     blueLabel.Text = "Large";
-                    sceneTest.Text = "3";
                     break;
                 case 4:
                     outputLabel.Text = "What size?";
                     redLabel.Text = "Small";
                     blueLabel.Text = "Large";
-                    sceneTest.Text = "4";
                     break;
                 case 5:
                     outputLabel.Text = "What size?";
                     redLabel.Text = "Small";
                     blueLabel.Text = "Large";
-                    sceneTest.Text = "5";
                     break;
                 case 6:
                     outputLabel.Text = "What size?";
                     redLabel.Text = "Small";
                     blueLabel.Text = "Large";
-                    sceneTest.Text = "6";
                     break;
                 case 7:
                     outputLabel.Text = "Any sides or extras?";
@@ -257,7 +254,6 @@ namespace CYOA_game
                     blueLabel.Text = "Chicken Wings";
                     sideImageL.Image = Properties.Resources.chickenwings;
                     subTotal = subTotal + canadianLPrice;
-                    sceneTest.Text = "7";
                     scene = 15;
                     break;
                 case 8:
@@ -269,7 +265,6 @@ namespace CYOA_game
                     blueLabel.Text = "Chicken Wings";
                     sideImageL.Image = Properties.Resources.chickenwings;
                     subTotal = subTotal + canadianSPrice;
-                    sceneTest.Text = "8";
                     scene = 15;
                     break;
                 case 9:
@@ -281,7 +276,6 @@ namespace CYOA_game
                     blueLabel.Text = "Chicken Wings";
                     sideImageL.Image = Properties.Resources.chickenwings;
                     subTotal = subTotal + hawaiianLPrice;
-                    sceneTest.Text = "9";
                     scene = 15;
                     break;
                 case 10:
@@ -293,7 +287,6 @@ namespace CYOA_game
                     blueLabel.Text = "Chicken Wings";
                     sideImageL.Image = Properties.Resources.chickenwings;
                     subTotal = subTotal + hawaiianSPrice;
-                    sceneTest.Text = "10";
                     scene = 15;
                     break;
                 case 11:
@@ -305,7 +298,6 @@ namespace CYOA_game
                     blueLabel.Text = "Fries";
                     sideImageL.Image = Properties.Resources.fries;
                     subTotal = subTotal + pepperoniLPrice;
-                    sceneTest.Text = "11";
                     scene = 16;
                     break;
                 case 12:
@@ -317,7 +309,6 @@ namespace CYOA_game
                     blueLabel.Text = "Fries";
                     sideImageL.Image = Properties.Resources.fries;
                     subTotal = subTotal + pepperoniSPrice;
-                    sceneTest.Text = "12";
                     scene = 16;
                     break;
                 case 13:
@@ -329,7 +320,6 @@ namespace CYOA_game
                     blueLabel.Text = "Fries";
                     sideImageL.Image = Properties.Resources.fries;
                     subTotal = subTotal + cheeseLPrice;
-                    sceneTest.Text = "13";
                     scene = 16;
                     break;
                 case 14:
@@ -341,7 +331,6 @@ namespace CYOA_game
                     blueLabel.Text = "Fries";
                     sideImageL.Image = Properties.Resources.fries;
                     subTotal = subTotal + cheeseSPrice;
-                    sceneTest.Text = "14";
                     scene = 16;
                     break;
                 case 15:
@@ -352,7 +341,6 @@ namespace CYOA_game
                     sideImageR.Image = Properties.Resources.nothing;
                     blueLabel.Text = "Chicken Wings";
                     sideImageL.Image = Properties.Resources.chickenwings;
-                    sceneTest.Text = "15";
                     break;
                 case 16:
                     outputLabel.Text = "Any sides or extras?";
@@ -362,7 +350,6 @@ namespace CYOA_game
                     sideImageR.Image = Properties.Resources.nothing;
                     blueLabel.Text = "Fries";
                     sideImageL.Image = Properties.Resources.fries;
-                    sceneTest.Text = "16";
                     break;
                 case 17:
                     sideImageR.Visible = true;
@@ -371,7 +358,6 @@ namespace CYOA_game
                     outputLabel.Text = "Boneless?";
                     redLabel.Text = "No";
                     blueLabel.Text = "Yes";
-                    sceneTest.Text = "17";
                     break;
                 case 18:
                     sideImageR.Visible = true;
@@ -380,58 +366,57 @@ namespace CYOA_game
                     outputLabel.Text = "What size?";
                     redLabel.Text = "Small";
                     blueLabel.Text = "Large";
-                    sceneTest.Text = "18";
                     break;
                 case 19:
                     subTotal = subTotal + bonelessWingPrice;
                     sideImageR.Image = null;
                     sideImageL.Image = null;
+                    locationImage.Image = Properties.Resources.tip;
                     double total = taxFull * subTotal;
                     string total1 = total.ToString("C");
                     outputLabel.Text = "Your total is " + total1 + "\n\nWould you like to tip?";
                     redLabel.Text = "No";
                     blueLabel.Text = "Yes";
-                    sceneTest.Text = "19";
                     scene = 24;
                     break;
                 case 20:
                     subTotal = subTotal + boneWingPrice;
                     sideImageR.Image = null;
                     sideImageL.Image = null;
+                    locationImage.Image = Properties.Resources.tip;
                     total = taxFull * subTotal;
                     total1 = total.ToString("C");
                     outputLabel.Text = "Your total is " + total1 + "\n\nWould you like to tip?";
                     redLabel.Text = "No";
                     blueLabel.Text = "Yes";
-                    sceneTest.Text = "20";
                     scene = 24;
                     break;
                 case 21:
                     subTotal = subTotal + friesLPrice;
                     sideImageR.Image = null;
                     sideImageL.Image = null;
+                    locationImage.Image = Properties.Resources.tip;
                     total = taxFull * subTotal;
                     total1 = total.ToString("C");
                     outputLabel.Text = "Your total is " + total1 + "\n\nWould you like to tip?";
                     redLabel.Text = "No";
                     blueLabel.Text = "Yes";
-                    sceneTest.Text = "21";
                     scene = 24;
                     break;
                 case 22:
                     subTotal = subTotal + friesSPrice;
                     sideImageR.Image = null;
                     sideImageL.Image = null;
+                    locationImage.Image = Properties.Resources.tip;
                     total = taxFull * subTotal;
                     total1 = total.ToString("C");
                     outputLabel.Text = "Your total is " + total1 + "\n\nWould you like to tip?";
                     redLabel.Text = "No";
                     blueLabel.Text = "Yes";
-                    sceneTest.Text = "22";
                     scene = 24;
                     break;
                 case 23:
-                    sideImageR.Image = null;
+                    sideImageR.Visible = false;
                     sideImageL.Image = null;
                     total = taxFull * subTotal;
                     taxTotal = tax * subTotal;
@@ -441,33 +426,33 @@ namespace CYOA_game
                     outputLabel.Text = "Subtotal: " + subTotal1 + "\nTax:      " + tax1 + "\nTotal:    " + total1;
                     redLabel.Text = "";
                     blueLabel.Text = "";
-                    sceneTest.Text = "23";
                     break;
                 case 24:
-                    sideImageR.Image = null;
+                    sideImageR.Visible = false;
                     sideImageL.Image = null;
+                    locationImage.Image = Properties.Resources.tip;
                     total = taxFull * subTotal;
                     total1 = total.ToString("C");
                     outputLabel.Text = "Your total is " + total1 + "\n\nWould you like to tip?";
                     redLabel.Text = "No";
                     blueLabel.Text = "Yes";
-                    sceneTest.Text = "24";
                     break;
                 case 25:
+                    sideImageR.Visible = false;
+                    locationImage.Image = Properties.Resources.pay;
                     outputLabel.Text = "How would you like to pay?";
                     redLabel.Text = "Cash";
                     blueLabel.Text = "Credit/Debit";
-                    sceneTest.Text = "25";
                     break;
                 case 26:
+                    locationImage.Image = Properties.Resources.have_nice_day;
                     outputLabel.Text = "Thank You! \nPlease Come Again!";
                     subTotal = 0;
                     total = 0;
                     redLabel.Text = "Quit";
                     blueLabel.Text = "Shop Again";
-                    sceneTest.Text = "26";
                     break;
-            }
+                }
         }
     }
 }
